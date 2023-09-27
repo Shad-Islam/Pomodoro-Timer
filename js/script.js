@@ -3,10 +3,14 @@ const startButton = document.getElementById("cntrlrBtn");
 const promodoroButton = document.getElementById("promodoro");
 const shortBreakButton = document.getElementById("shortBreak");
 const longBreakButton = document.getElementById("longBreak");
+const addTaskButton = document.getElementById("addTaskBtn");
+const taskInput = document.getElementById("taskInput");
+const taskList = document.getElementById("taskList");
 
 let timer;
-let timeInSeconds = 1500; 
+let timeInSeconds = 1500;
 let isTimerRunning = false;
+const tasks = [];
 
 function updateDisplay() {
   const minutes = Math.floor(timeInSeconds / 60);
@@ -41,24 +45,46 @@ startButton.addEventListener("click", startTimer);
 
 promodoroButton.addEventListener("click", () => {
   if (!isTimerRunning) {
-    timeInSeconds = 1500; 
+    timeInSeconds = 1500;
     updateDisplay();
   }
 });
 
 shortBreakButton.addEventListener("click", () => {
   if (!isTimerRunning) {
-    timeInSeconds = 300; 
+    timeInSeconds = 300;
     updateDisplay();
   }
 });
 
 longBreakButton.addEventListener("click", () => {
   if (!isTimerRunning) {
-    timeInSeconds = 900; 
+    timeInSeconds = 900;
     updateDisplay();
   }
 });
 
-// Initial display
+addTaskButton.addEventListener("click", () => {
+  const taskName = taskInput.value.trim();
+  if (taskName) {
+    tasks.push(taskName);
+    taskInput.value = "";
+    renderTaskList();
+  }
+});
+
+function renderTaskList() {
+  taskList.innerHTML = "";
+  tasks.forEach((task, index) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = `${index + 1}. ${task}`;
+    listItem.addEventListener("click", () => {
+      timeInSeconds = 1500;
+      updateDisplay();
+      startTimer();
+    });
+    taskList.appendChild(listItem);
+  });
+}
+
 updateDisplay();

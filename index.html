@@ -10,6 +10,7 @@
     <div class="container">
       <div class="container__heading">
         <h1>Pomodoro Timer</h1>
+        <hr />
       </div>
       <div class="card">
         <!-- time pattern buttons-->
@@ -21,9 +22,22 @@
         <div class="card__timer">
           <h1 id="timer">25 : 00</h1>
         </div>
-        <!-- star/pause button -->
+        <!-- start/pause button -->
         <div class="card__buttons">
           <button id="cntrlrBtn">Start</button>
+        </div>
+
+        <!-- Task section -->
+        <div class="task-section">
+          <!-- <h2>Add Task</h2> -->
+          <input type="text" id="taskInput" placeholder="Enter your task" />
+          <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <!-- Task list -->
+        <div class="task-list">
+          <h2>Task List</h2>
+          <ul id="taskList"></ul>
         </div>
       </div>
     </div>
