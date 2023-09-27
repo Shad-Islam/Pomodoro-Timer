@@ -3,11 +3,19 @@
     padding: 0px;
     box-sizing: border-box;
 }
+body{
+    background: linear-gradient(202deg, rgba(248, 177, 149, 0.80) 15.76%, rgba(228, 122, 122, 0.74) 24.39%, rgba(209, 71, 104, 0.70) 37.74%, rgba(117, 87, 142, 0.78) 53.72%, #355C7D 73.82%);
+}
 .container{
     width: 650px;
     height: 100vh;
     margin: 0 auto;
-    background-color: red;
+    text-align: center;
+}
+.container__heading{
+    color: #FFF;
+    font-size: 30px;
+    letter-spacing: 2px;
 }
 .card {
     width: 540px;
