@@ -26,14 +26,34 @@
 }
 
 .card__buttons .button{
+    width: 125px;
+    border: 0px;
+    outline: 0px;
+    color: #FFF;
+    cursor: pointer;
+    background:none;
+    font-size: 16px;
+    padding: 15px 10px; 
+    letter-spacing: 1px; 
+    transition: all linear 0.5s; 
+}
+
+.card__buttons .button:active{
+    font-weight: 800;
+    border-radius: 5px;
+    background-color: rgb(255, 255,255,0.3);
+}
+
+.card__timer{
+    font-size: 40px;
+    margin-bottom:30px;
+}
+
+#cntrlrBtn{
     border: 0px;
     outline: 0px;
     cursor: pointer;
-    background:none;
-    padding: 15px 10px;  
-    transition: all linear 0.5s; 
-}
-.card__buttons .button:active{
+    font-size: 23px;
     border-radius: 5px;
-    background-color: rgb(255, 255,255,0.3);
+    padding: 10px 30px;
 }
