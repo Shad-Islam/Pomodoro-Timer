@@ -3,3 +3,37 @@
     padding: 0px;
     box-sizing: border-box;
 }
+.container{
+    width: 650px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: red;
+}
+.card {
+    width: 540px;
+    color: #fff;
+    margin: 30px auto;
+    padding: 3% 35px;
+    text-align: center;
+    border-radius: 5px;
+    backdrop-filter: blur(3px);
+    background-color: rgb(255, 255,255,0.2);
+    border: 2px solid rgb(255, 255,255,0.3);
+}
+
+.card__buttons{
+    margin-bottom:30px;
+}
+
+.card__buttons .button{
+    border: 0px;
+    outline: 0px;
+    cursor: pointer;
+    background:none;
+    padding: 15px 10px;  
+    transition: all linear 0.5s; 
+}
+.card__buttons .button:active{
+    border-radius: 5px;
+    background-color: rgb(255, 255,255,0.3);
+}
